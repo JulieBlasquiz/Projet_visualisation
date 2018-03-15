@@ -7,36 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="projetslimgo.css">
+	<link rel="stylesheet" href="projetannotation.css">
 	<script src="venn.js"></script>
 </head>
 <body>
 	<h1>Projet d'annotation de données protéomiques</h1>
 	<div ng-controller='moncontroller'>
-		<p>la valeur stockée dans le premier champ est: {{madata1}}</p>
-		<p>la valeur stockée dans le deuxième champ est: {{madata2}}</p>
-		<p><input id="espèce1" ng-model="madata1"><input type="button" value="importer"></p>
-		<p><input id="espèce2" ng-model="madata2"><input type="button" value="importer"></p>
-		<p><input id="launch" type="button" value="lancer"></p>
-		<p><input type="checkbox" id="neww" value="parameter">
-			<label for="neww">paramètre</label></p>
-		<fieldset>
-			<legend>résultat de l'analyse</legend>
-			<div>
-				<p>annotations communes aux deux espèces: <em id='both'>none</em></p>
-				<p>annotations uniques à l'espèce 1: <em id='one'>none</em></p>
-				<p>annotations uniques à l'espèce 2: <em id='two'>none</em></p>
-		</fieldset>
-		<div id="venn_1" style=float:left>
-			<h3>Diagramme de Venn</h3>
-		</div>
-		<div id="venn_2" style=float:left>
-		</div>
-		<div id='venn_value'>texte
+		<p><input id="testeur" type="button" value="testeur"></p>
+		<input type='file' onchange='openFile(event)'><br>
+		<p>le fichier doit respecter le format <strong>.csv</strong> avec comme séparateur ";"</p>
+		<p><input id="launch" type="button" value="lancer le script"></p>
+		<div id="venn_1">
+			<h3 id='venn_title'></h3>
+			<p id='venn_value'></p>
+			<p id="venn_diagram"></p>
 		</div>
 	</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="./projetslimgo.js"></script>
-<script src="./projetslimgo2.js"></script>
+</body>"https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"
+<script src=></script>
+<script src="./projetannotation.js"></script>
 </html>
