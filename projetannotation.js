@@ -1,5 +1,5 @@
 /*
-Script pour le projet d'annotation des données protéomiques
+Script for annotation of proteomic data project
 */
 
 //partie angular.js
@@ -13,50 +13,31 @@ app.controller('moncontroller',['$scope', function(scope){
 */
 
 
-//récupère les bouttons dans des variables
+//get html elements in variables
 var launch = document.getElementById('launch');
 var testeur = document.getElementById('testeur');
+var help = document.getElementById('helpcsv');
 
-//active des fonctions lors d'évènements
+//launch functions from variables
 var setupListeners = function() {
 //	launch.addEventListener('click', analysis);
 	launch.addEventListener('click', diagram);
 	testeur.addEventListener('click', testeu);
+    help.addEventListener('mouseover', helpcsv);
 }
 
 var testeu = function() {
 alert(datanumber);
 }
 
-
-//compare deux listes de caractères, met en commun éléments identiques
-/*
-var analysis = function () {
-	var sp1 = document.getElementById('espèce1').value;
-	var sp2 = document.getElementById('espèce2').value;
-	sp1 = sp1.split(' ');
-	sp2 = sp2.split(' ');
-	var tab = [];
-	for (var elem1 in sp1){
-		for (var elem2 in sp2){
-			if (sp1[elem1]<=sp2[elem2]) {
-				tab.push(sp1[elem1]);
-				sp1.splice(elem1,1);
-				sp2.splice(elem2,1);
-			}
-		}
-	}
-	var texte1 = document.getElementById('both');
-	texte1.textContent = tab;
-	var texte2 = document.getElementById('one');
-	texte2.textContent = sp1;
-	var texte3 = document.getElementById('two');
-	texte3.textContent = sp2;
+var helpcsv = function() {
+    tooltip.transition().duration(40).style("opacity", 1);
+    tooltip.text("comment faire");
 }
-*/
 
 
-//importation d'un fichier type csv
+
+//import of a csv file
 var dataimport = 0;
 var datanumber = [0,0,0,0,0,0,0];
 var datagenes = [[],[],[],[],[],[],[]];
@@ -72,31 +53,31 @@ var openFile = function(event) {
 		}
         for(var i=1;i<dataimport.length;i++){
             
-            if(typeof(dataimport[i][0]) === "string" && typeof(dataimport[i][1]) === "undefined" && typeof(dataimport[i][2]) === "undefined"){
+            if(dataimport[i][0].length > 1 && dataimport[i][1].length === 1 && dataimport[i][2].length === 1){
                 datanumber[6]=datanumber[6]+1;
                 datagenes[6].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "undefined" && typeof(dataimport[i][1]) === "string" && typeof(dataimport[i][2]) === "undefined"){
+            if(dataimport[i][0].length === 1 && dataimport[i][1].length > 1 && dataimport[i][2].length === 1){
                 datanumber[5]=datanumber[5]+1;
                 datagenes[5].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "undefined" && typeof(dataimport[i][1]) === "undefined" && typeof(dataimport[i][2]) === "string"){
+            if(dataimport[i][0].length === 1 && dataimport[i][1].length === 1 && dataimport[i][2].length > 1){
                 datanumber[4]=datanumber[4]+1;
                 datagenes[4].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "string" && typeof(dataimport[i][1]) === "string" && typeof(dataimport[i][2]) === "undefined"){
+            if(dataimport[i][0].length > 1 && dataimport[i][1].length > 1 && dataimport[i][2].length === 1){
                 datanumber[3]=datanumber[3]+1;
                 datagenes[3].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "string" && typeof(dataimport[i][1]) === "undefined" && typeof(dataimport[i][2]) === "string"){
+            if(dataimport[i][0].length > 1 && dataimport[i][1].length === 1 && dataimport[i][2].length > 1){
                 datanumber[2]=datanumber[2]+1;
                 datagenes[2].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "undefined" && typeof(dataimport[i][1]) === "string" && typeof(dataimport[i][2]) === "string"){
+            if(dataimport[i][0].length === 1 && dataimport[i][1].length > 1 && dataimport[i][2].length > 1){
                 datanumber[1]=datanumber[1]+1;
                 datagenes[1].push(dataimport[i]);
             }
-            if(typeof(dataimport[i][0]) === "string" && typeof(dataimport[i][1]) === "string" && typeof(dataimport[i][2]) === "string"){
+            if(dataimport[i][0].length > 1 && dataimport[i][1].length > 1 && dataimport[i][2].length > 1){
                 datanumber[0]=datanumber[0]+1;
                 datagenes[0].push(dataimport[i]);
             }
@@ -107,18 +88,18 @@ var openFile = function(event) {
 };
 
 
-//calcule et affiche le diagramme de venn à partir des données importées
+//calcul and show the venn diagram from imported data
 var diagram = function(){
 
-//données du diagramme de venn
+//venn diagram data
 var sets = [
     {sets:["sp1"], figure: datanumber[6], label: dataimport[0][0], size: datanumber[6]},
     {sets:["sp2"], figure: datanumber[5], label: dataimport[0][1], size: datanumber[5]},
     {sets:["sp3"], figure: datanumber[4], label: dataimport[0][2], size: datanumber[4]},
-    {sets: ["sp1", "sp2"], figure: datanumber[3], label: dataimport[0][0]+',\n'+dataimport[0][1], size: datanumber[3]},
-    {sets: ["sp1", "sp3"], figure: datanumber[2], label: dataimport[0][0]+',\n'+dataimport[0][2], size: datanumber[2]},
-    {sets: ["sp2", "sp3"], figure: datanumber[1], label: dataimport[0][1]+',\n'+dataimport[0][2], size: datanumber[1]},
-    {sets: ["sp1", "sp2", "sp3"], figure: datanumber[0], label: dataimport[0][2]+',\n'+dataimport[0][1]+',\n'+dataimport[0][2], size: datanumber[0]}
+    {sets: ["sp1", "sp2"], figure: datanumber[3], label: "", size: datanumber[3]},
+    {sets: ["sp1", "sp3"], figure: datanumber[2], label: "", size: datanumber[2]},
+    {sets: ["sp2", "sp3"], figure: datanumber[1], label: "", size: datanumber[1]},
+    {sets: ["sp1", "sp2", "sp3"], figure: datanumber[0], label: "", size: datanumber[0]}
     ];
 
 
@@ -150,8 +131,9 @@ div.selectAll("g")
     tooltip.text("le nombre de gènes de " + d.label + "est de " + d.size);
 
 
+    // problème graphique disparait
     //highlight the current path
-    var selection = d3.select(this).transition("tooltip").duration(400);
+   /* var selection = d3.select(this).transition("tooltip").duration(400);
     selection.select("path")
         .style("stroke-width", 3)
         .style("fill-opacity", d.sets.length < 1 ? .8 : 0)
@@ -170,9 +152,9 @@ div.selectAll("g")
             .style("stroke-width", 3)
             .style("fill-opacity", d.sets.length < 1 ? .8 : 0)
             .style("stroke-opacity", 1);
-    })
+    */})
 
-    //affiche des données avec un clic
+		//affiche données en cliquant, sera remplacé par menu déroulant
     .on("click", function(d, i){
       venn.sortAreas(div, d);
       var texte = document.getElementById('venn_value');
@@ -189,16 +171,13 @@ var venntitle = document.getElementById('venn_title');
 
 
 
+/*to do:
+reduire la taille de la fonction import avec des boucles
+faire des menus déroulants pour choisir les listes de gènes à afficher
+appeler un fonction python
+*/
 
 
-
-
-
-
-
-
-
-//alert('truc');
 
 
 window.addEventListener('load', setupListeners);

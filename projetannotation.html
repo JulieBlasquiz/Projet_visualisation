@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html ng-app="monapp">
 <head>
-	<title>Projet annotation</title>
+	<title>Annotation project</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,19 +11,20 @@
 	<script src="venn.js"></script>
 </head>
 <body>
-	<h1>Projet d'annotation de données protéomiques</h1>
+	<h1>Annotation of proteomic data project</h1>
 	<div ng-controller='moncontroller'>
 		<p><input id="testeur" type="button" value="testeur"></p>
 		<input type='file' onchange='openFile(event)'><br>
-		<p>le fichier doit respecter le format <strong>.csv</strong> avec comme séparateur ";"</p>
-		<p><input id="launch" type="button" value="lancer le script"></p>
+		<p>file must respect the <strong>.csv</strong> extension with ";" separator</p>
+		<p>There must not be any empty cells in the data frame. They must be filled with a single caracter for the script to work. <em id="helpcsv" class="tooltip">(help)</em></p>
+		<p><input id="launch" type="button" value="launch script"></p>
 		<div id="venn_1">
 			<h3 id='venn_title'></h3>
 			<p id='venn_value'></p>
 			<p id="venn_diagram"></p>
 		</div>
 	</div>
-</body>"https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"
-<script src=></script>
-<script src="./projetannotation.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="projetannotation.js"></script>
 </html>
