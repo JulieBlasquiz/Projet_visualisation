@@ -1,0 +1,941 @@
+Annot,1,2,3,N
+Oxidative phosphorylation,1,0,0,940
+Metabolic pathways,1,0,0,940
+Alzheimer's disease,1,0,0,940
+Parkinson's disease,1,0,0,940
+Huntington's disease,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,1,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,1,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,1,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,2,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,2,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,3,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,3,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,2,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,2,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,3,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,2,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,1,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,2,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,2,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,2,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,2,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,2,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Serotonergic synapse,2,0,0,940
+Alzheimer's disease,3,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,2,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,3,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,3,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Serotonergic synapse,2,0,0,940
+Alzheimer's disease,3,0,0,940
+Sphingolipid metabolism,1,0,0,940
+Lysosome,3,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,1,0,0,940
+cAMP signaling pathway,1,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,1,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,1,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,1,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,1,0,0,940
+FoxO signaling pathway,1,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,2,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,1,0,0,940
+Progesterone-mediated oocyte maturation,1,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,1,0,0,940
+Pathways in cancer,1,0,0,940
+Proteoglycans in cancer,1,0,0,940
+Colorectal cancer,1,0,0,940
+Renal cell carcinoma,1,0,0,940
+Pancreatic cancer,1,0,0,940
+Endometrial cancer,1,0,0,940
+Glioma,1,0,0,940
+Prostate cancer,1,0,0,940
+Melanoma,1,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,1,0,0,940
+Acute myeloid leukemia,1,0,0,940
+Non-small cell lung cancer,1,0,0,940
+Lysosome,3,0,0,940
+Focal adhesion,1,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,1,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,3,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Serotonergic synapse,2,0,0,940
+Alzheimer's disease,3,0,0,940
+Sphingolipid metabolism,1,0,0,940
+Lysosome,3,0,0,940
+Neuroactive ligand-receptor interaction,1,0,0,940
+Cholinergic synapse,1,0,0,940
+Nicotine addiction,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,2,0,0,940
+cAMP signaling pathway,2,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,2,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,2,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,2,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,2,0,0,940
+FoxO signaling pathway,2,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,2,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,2,0,0,940
+Progesterone-mediated oocyte maturation,2,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,2,0,0,940
+Pathways in cancer,2,0,0,940
+Proteoglycans in cancer,2,0,0,940
+Colorectal cancer,2,0,0,940
+Renal cell carcinoma,2,0,0,940
+Pancreatic cancer,2,0,0,940
+Endometrial cancer,2,0,0,940
+Glioma,2,0,0,940
+Prostate cancer,2,0,0,940
+Melanoma,2,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,2,0,0,940
+Acute myeloid leukemia,2,0,0,940
+Non-small cell lung cancer,2,0,0,940
+Lysosome,3,0,0,940
+Focal adhesion,2,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,2,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,1,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,3,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Serotonergic synapse,2,0,0,940
+Alzheimer's disease,3,0,0,940
+Sphingolipid metabolism,1,0,0,940
+Lysosome,3,0,0,940
+Neuroactive ligand-receptor interaction,1,0,0,940
+Cholinergic synapse,2,0,0,940
+Nicotine addiction,1,0,0,940
+MAPK signaling pathway,1,0,0,940
+ErbB signaling pathway,2,0,0,940
+Ras signaling pathway,1,0,0,940
+Rap1 signaling pathway,1,0,0,940
+cGMP-PKG signaling pathway,2,0,0,940
+cAMP signaling pathway,2,0,0,940
+Chemokine signaling pathway,1,0,0,940
+HIF-1 signaling pathway,1,0,0,940
+FoxO signaling pathway,2,0,0,940
+Sphingolipid signaling pathway,1,0,0,940
+mTOR signaling pathway,1,0,0,940
+PI3K-Akt signaling pathway,1,0,0,940
+AMPK signaling pathway,1,0,0,940
+Apoptosis,1,0,0,940
+Adrenergic signaling in cardiomyocytes,2,0,0,940
+VEGF signaling pathway,1,0,0,940
+Osteoclast differentiation,1,0,0,940
+Focal adhesion,2,0,0,940
+Tight junction,2,0,0,940
+Signaling pathways regulating pluripotency of stem cells,1,0,0,940
+Platelet activation,1,0,0,940
+Toll-like receptor signaling pathway,1,0,0,940
+Jak-STAT signaling pathway,1,0,0,940
+T cell receptor signaling pathway,1,0,0,940
+B cell receptor signaling pathway,1,0,0,940
+Fc epsilon RI signaling pathway,1,0,0,940
+Fc gamma R-mediated phagocytosis,1,0,0,940
+TNF signaling pathway,1,0,0,940
+Neurotrophin signaling pathway,1,0,0,940
+Cholinergic synapse,2,0,0,940
+Dopaminergic synapse,1,0,0,940
+Insulin signaling pathway,2,0,0,940
+Progesterone-mediated oocyte maturation,2,0,0,940
+Estrogen signaling pathway,1,0,0,940
+Prolactin signaling pathway,1,0,0,940
+Thyroid hormone signaling pathway,2,0,0,940
+Adipocytokine signaling pathway,1,0,0,940
+Glucagon signaling pathway,1,0,0,940
+Regulation of lipolysis in adipocytes,1,0,0,940
+Insulin resistance,1,0,0,940
+Non-alcoholic fatty liver disease (NAFLD),1,0,0,940
+Carbohydrate digestion and absorption,2,0,0,940
+Chagas disease (American trypanosomiasis),1,0,0,940
+Toxoplasmosis,1,0,0,940
+Tuberculosis,1,0,0,940
+Hepatitis C,2,0,0,940
+Hepatitis B,1,0,0,940
+Measles,1,0,0,940
+Influenza A,1,0,0,940
+HTLV-I infection,1,0,0,940
+Epstein-Barr virus infection,1,0,0,940
+Pathways in cancer,2,0,0,940
+Proteoglycans in cancer,2,0,0,940
+Colorectal cancer,2,0,0,940
+Renal cell carcinoma,2,0,0,940
+Pancreatic cancer,2,0,0,940
+Endometrial cancer,2,0,0,940
+Glioma,2,0,0,940
+Prostate cancer,2,0,0,940
+Melanoma,2,0,0,940
+Chronic myeloid leukemia,2,0,0,940
+Acute myeloid leukemia,2,0,0,940
+Small cell lung cancer,1,0,0,940
+Non-small cell lung cancer,2,0,0,940
+Central carbon metabolism in cancer,1,0,0,940
+Choline metabolism in cancer,1,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+Oxidative phosphorylation,2,0,0,940
+Metabolic pathways,4,0,0,940
+Alzheimer's disease,3,0,0,940
+Parkinson's disease,2,0,0,940
+Huntington's disease,2,0,0,940
+cGMP-PKG signaling pathway,2,0,0,940
+cAMP signaling pathway,2,0,0,940
+Cardiac muscle contraction,1,0,0,940
+Adrenergic signaling in cardiomyocytes,2,0,0,940
+Insulin secretion,1,0,0,940
+Thyroid hormone synthesis,1,0,0,940
+Thyroid hormone signaling pathway,2,0,0,940
+Aldosterone-regulated sodium reabsorption,1,0,0,940
+Endocrine and other factor-regulated calcium reabsorption,1,0,0,940
+Proximal tubule bicarbonate reclamation,1,0,0,940
+Salivary secretion,1,0,0,940
+Gastric acid secretion,1,0,0,940
+Pancreatic secretion,1,0,0,940
+Carbohydrate digestion and absorption,2,0,0,940
+Protein digestion and absorption,1,0,0,940
+Bile secretion,1,0,0,940
+Mineral absorption,1,0,0,940
+ErbB signaling pathway,2,0,0,940
+FoxO signaling pathway,2,0,0,940
+Vascular smooth muscle contraction,1,0,0,940
+Natural killer cell mediated cytotoxicity,1,0,0,940
+Long-term potentiation,1,0,0,940
+Serotonergic synapse,2,0,0,940
+Long-term depression,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Insulin signaling pathway,2,0,0,940
+Progesterone-mediated oocyte maturation,2,0,0,940
+Alcoholism,1,0,0,940
+Hepatitis C,2,0,0,940
+Pathways in cancer,2,0,0,940
+Proteoglycans in cancer,2,0,0,940
+Colorectal cancer,2,0,0,940
+Renal cell carcinoma,2,0,0,940
+Pancreatic cancer,2,0,0,940
+Endometrial cancer,2,0,0,940
+Glioma,2,0,0,940
+Prostate cancer,2,0,0,940
+Melanoma,2,0,0,940
+Bladder cancer,1,0,0,940
+Chronic myeloid leukemia,2,0,0,940
+Acute myeloid leukemia,2,0,0,940
+Non-small cell lung cancer,2,0,0,940
+Lysosome,3,0,0,940
+Focal adhesion,2,0,0,940
+Adherens junction,1,0,0,940
+Tight junction,2,0,0,940
+Leukocyte transendothelial migration,1,0,0,940
+Regulation of actin cytoskeleton,2,0,0,940
+Amoebiasis,1,0,0,940
+Viral carcinogenesis,2,0,0,940
+Systemic lupus erythematosus,1,0,0,940
+Arrhythmogenic right ventricular cardiomyopathy (ARVC),1,0,0,940
+Lysosome,3,0,0,940
+Glycolysis / Gluconeogenesis,1,0,0,940
+Pentose phosphate pathway,1,0,0,940
+Fructose and mannose metabolism,1,0,0,940
+Metabolic pathways,4,0,0,940
+Biosynthesis of antibiotics,1,0,0,940
+Carbon metabolism,1,0,0,940
+Biosynthesis of amino acids,1,0,0,940
+Folate biosynthesis,1,0,0,940
+Metabolic pathways,4,0,0,940
+Serotonergic synapse,2,0,0,940
+Alzheimer's disease,3,0,0,940
+Sphingolipid metabolism,1,0,0,940
+Lysosome,3,0,0,940
+Neuroactive ligand-receptor interaction,1,0,0,940
+Cholinergic synapse,2,0,0,940
+Nicotine addiction,1,0,0,940
+MAPK signaling pathway,1,0,0,940
+ErbB signaling pathway,2,0,0,940
+Ras signaling pathway,1,0,0,940
+Rap1 signaling pathway,1,0,0,940
+cGMP-PKG signaling pathway,2,0,0,940
+cAMP signaling pathway,2,0,0,940
+Chemokine signaling pathway,1,0,0,940
+HIF-1 signaling pathway,1,0,0,940
+FoxO signaling pathway,2,0,0,940
+Sphingolipid signaling pathway,1,0,0,940
+mTOR signaling pathway,1,0,0,940
+PI3K-Akt signaling pathway,2,0,0,940
+AMPK signaling pathway,1,0,0,940
+Apoptosis,1,0,0,940
+Adrenergic signaling in cardiomyocytes,2,0,0,940
+VEGF signaling pathway,1,0,0,940
+Osteoclast differentiation,1,0,0,940
+Focal adhesion,2,0,0,940
+Tight junction,2,0,0,940
+Signaling pathways regulating pluripotency of stem cells,1,0,0,940
+Platelet activation,1,0,0,940
+Toll-like receptor signaling pathway,1,0,0,940
+Jak-STAT signaling pathway,1,0,0,940
+T cell receptor signaling pathway,1,0,0,940
+B cell receptor signaling pathway,1,0,0,940
+Fc epsilon RI signaling pathway,1,0,0,940
+Fc gamma R-mediated phagocytosis,1,0,0,940
+TNF signaling pathway,1,0,0,940
+Neurotrophin signaling pathway,1,0,0,940
+Cholinergic synapse,2,0,0,940
+Dopaminergic synapse,1,0,0,940
+Insulin signaling pathway,2,0,0,940
+Progesterone-mediated oocyte maturation,2,0,0,940
+Estrogen signaling pathway,1,0,0,940
+Prolactin signaling pathway,1,0,0,940
+Thyroid hormone signaling pathway,2,0,0,940
+Adipocytokine signaling pathway,1,0,0,940
+Glucagon signaling pathway,1,0,0,940
+Regulation of lipolysis in adipocytes,1,0,0,940
+Insulin resistance,1,0,0,940
+Non-alcoholic fatty liver disease (NAFLD),1,0,0,940
+Carbohydrate digestion and absorption,2,0,0,940
+Chagas disease (American trypanosomiasis),1,0,0,940
+Toxoplasmosis,1,0,0,940
+Tuberculosis,1,0,0,940
+Hepatitis C,2,0,0,940
+Hepatitis B,2,0,0,940
+Measles,1,0,0,940
+Influenza A,1,0,0,940
+HTLV-I infection,1,0,0,940
+Epstein-Barr virus infection,2,0,0,940
+Pathways in cancer,2,0,0,940
+Proteoglycans in cancer,2,0,0,940
+Colorectal cancer,2,0,0,940
+Renal cell carcinoma,2,0,0,940
+Pancreatic cancer,2,0,0,940
+Endometrial cancer,2,0,0,940
+Glioma,2,0,0,940
+Prostate cancer,2,0,0,940
+Melanoma,2,0,0,940
+Chronic myeloid leukemia,2,0,0,940
+Acute myeloid leukemia,2,0,0,940
+Small cell lung cancer,1,0,0,940
+Non-small cell lung cancer,2,0,0,940
+Central carbon metabolism in cancer,1,0,0,940
+Choline metabolism in cancer,1,0,0,940
+Cell cycle,1,0,0,940
+Oocyte meiosis,1,0,0,940
+PI3K-Akt signaling pathway,2,0,0,940
+Hippo signaling pathway,1,0,0,940
+Hepatitis B,2,0,0,940
+Epstein-Barr virus infection,2,0,0,940
+Viral carcinogenesis,2,0,0,940
