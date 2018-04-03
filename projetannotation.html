@@ -14,31 +14,34 @@
 	<h1>Annotation of proteomic data project</h1>
 	<div ng-controller='moncontroller'>
 		<p><input id="testeur" type="button" value="testeur"></p>
+		<p><input id="testeur2" type="button" value="testeur2"></p>
 		<input type='file' onchange='openFile(event)'><br>
-		<p>file must respect the <strong>.csv</strong> extension with ";" separator</p>
-		<p>There must not be any empty cells in the data frame. They must be filled with a single caracter for the script to work. <em id="helpcsv" class="tooltip">(help)</em></p>
+		<input type='file' onchange='openFile2(event)'><br>
+		<input type='file' onchange='openFile3(event)'><br>
+		<p>file must respect the <strong>.csv</strong> extension with ";" separator. There must not be any empty cells in the data frame. They must be filled with a single caracter for the script to work. <em id='helpcsv1'>(help)</em><em id="helpcsv" class="tooltip"></em></p>
+		<p>Besides the first column of the first file must correspond to up-regulated genes, same for second column of second file and third column of third file</p>
 		<p><input id="launch" type="button" value="launch script"></p>
 		<div id="venn_1">
 			<h3 id='venn_title'></h3>
 			<p id='venn_value'></p>
 			<p id="venn_diagram"></p>
 			
-    <FORM>
-    <SELECT name="nom" size="1">
-    <OPTION>Specie 1
-    <OPTION>Specie 2
-    <OPTION>Specie 3
-    </SELECT>
-    <SELECT name="nom" size="1">
-    <OPTION>Specie 1
-    <OPTION>Specie 2
-    <OPTION>Specie 3
+    <FORM name="menuform">
+    <SELECT name="menuselect1" size="1">
+    <option class="menutest">Specie 1</option>
+    <option class="menutest">Specie 2</option>
+    <option class="menutest">Specie 3</option>
+    <option class="menutest">Specie 1+2</option>
+    <option class="menutest">Specie 1+3</option>
+    <option class="menutest">Specie 2+3</option>
+    <option class="menutest">Specie 1+2+3</option>
     </SELECT>
     </FORM>
 
 		</div>
+		<div id="importtest"></div>
 	</div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="projetannotation.js"></script>
+<!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"--></script>
+<script src="projetannotation2.js"></script>
 </html>
