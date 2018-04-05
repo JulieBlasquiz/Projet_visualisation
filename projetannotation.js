@@ -2,23 +2,13 @@
 Script for annotation of proteomic data project
 */
 
-//partie angular.js
-/*
-var app = angular.module('monapp',[])
-
-app.controller('moncontroller',['$scope', function(scope){
-	scope.madata1 = "AA BB CC DD"
-	scope.madata2 = "AA CC FF HH"
-}])
-*/
-
 
 //get html elements in variables
 var launch = document.getElementById('launch');
+var download = document.getElementById('download');
 var testeur = document.getElementById('testeur');
 var testeur2 = document.getElementById('testeur2');
 var help = document.getElementById('helpcsv1');
-var help2 = d3.select("#helpcsv");
 
 
 //launch functions from variables
@@ -26,8 +16,10 @@ var setupListeners = function() {
 //	launch.addEventListener('click', analysis);
 	launch.addEventListener('click', diagram);
 	testeur.addEventListener('click', testeu);
-    testeur2.addEventListener('click', testeu2);
-	help.addEventListener('mouseover', helpcsv);
+	testeur2.addEventListener('click', testeu2);
+	help.addEventListener('mouseover', helpcsv1);
+	help.addEventListener('mouseout', helpcsv2);
+    download.addEventListener('click',downloadfile);
 }
 
 var testeu = function() {
@@ -39,20 +31,26 @@ var testeu2 = function() {
     document.getElementById("importtest").innerHTML = "";
     var tablevenn = ftest();
     var sp = document.menuform.menuselect1.selectedIndex;
+    d3.select("#importtest").append("p").text(tablevenn[sp].length + " were up regulated")
     for (var i=0;i<tablevenn[sp].length;i++){
     d3.select("#importtest").append("div").append("a").attr("href", "http://www.uniprot.org/uniprot/" + tablevenn[sp][i][0]).text(tablevenn[sp][i][0] + " ; ")
     .append("a").attr("href", "http://www.uniprot.org/uniprot/" + tablevenn[sp][i][1]).text(tablevenn[sp][i][1] + " ; ")
     .append("a").attr("href", "http://www.uniprot.org/uniprot/" + tablevenn[sp][i][2]).text(tablevenn[sp][i][2]);
-
-}
-}
+}}
 
 
-
-var helpcsv = function() {
-    help2.text("comment faire");
+var helpcsv1 = function() {
+    d3.select("#helpcsv1").append("div").attr("id","helpcsv2").attr("class","tooltip");
+    var help2 = d3.select("#helpcsv2");
+    help2.text("Open the file with excel or libreoffice calc, select your dataframe, search \"\" and replace with \"NA\", then save as .csv with \";\" separator.");
     help2.transition().duration(40).style("opacity", 1);
 }
+var helpcsv2 = function() {
+    var suppr = document.getElementById('helpcsv2');
+    var parent = document.getElementById('helpcsv1');
+    parent.removeChild(suppr);
+}
+
 
 //push first element of array to the end
 var pushleft = function(tab){
@@ -61,6 +59,7 @@ tab.splice(0,1);
 tab.push(tmp);
 }
 
+//Delete dupplicate elements in array of array
 var delarray = function(tab){
 tab.sort();
 var i = 0;
@@ -70,10 +69,31 @@ tab.splice(i+1,1);
 i--;
 }
 i++;
-}
-}
+}}
 
+function downloadfile() {
+    var tabvenn = ftest();
+    var sp = document.menuform.menuselect1.selectedIndex;
+    tabvenn = tabvenn[sp];
+    var text;
+    for (var i=0;i<tabvenn.length;i++){
+        for (var j=0;j<3;j++){
+            if (tabvenn[i][j] !== 'NA'){
+                text = text + String(tabvenn[i][j]) + ",\n";
+            }
+        }
+    }
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', 'specie'+String(sp));
 
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
 
 //import of a csv file
 var dataimport1 = 0;
@@ -91,7 +111,6 @@ var openFile = function(event) {
 	};
 	reader.readAsText(input.files[0]);
 };
-
 
 var dataimport2 = 0;
 var openFile2 = function(event) {
@@ -135,22 +154,20 @@ function readimport1(Cn,X,I,Import1,Import2){
 var ftest = function(){
 var tablevenn = [[],[],[],[],[],[],[]];
 var cycle = [dataimport1,dataimport2,dataimport3];
+var nbc = [0,1,2];
 var cn = 0;
 for (var n=0;n<3;n++){
 for (var i = 0; i<cycle[0].length;i++){
     for (var j = 0; j<cycle[1].length;j++){
-        if ((cycle[0][i][0] === cycle[1][j][0]) && (cycle[0][i][1] !== "NA") && (cycle[0][i][2] !== "NA")){
+        if ((cycle[0][i][nbc[0]] === cycle[1][j][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
             cn+=1;
             break;
-        }
-    }
-
+        }}
     for (var k = 0; k<cycle[2].length;k++){
-        if ((cycle[0][i][0] === cycle[2][k][0]) && (cycle[0][i][1] !== "NA") && (cycle[0][i][2] !== "NA")){
+        if ((cycle[0][i][nbc[0]] === cycle[2][k][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
             cn+=2;
             break;
-        }
-    }
+        }}
     if (cn === 0){
     tablevenn[n].push(cycle[0][i]);
     }
@@ -178,6 +195,7 @@ for (var i = 0; i<cycle[0].length;i++){
     cn=0;
 }
 pushleft(cycle);
+pushleft(nbc);
 }
 for (var i=0;i<tablevenn.length;i++){
 delarray(tablevenn[i]);
@@ -190,7 +208,6 @@ return tablevenn;
 
 //calcul and show the venn diagram from imported data
 var diagram = function(){
-
 var tablevenn = ftest();
 //venn diagram data
 var sets = [
@@ -203,11 +220,9 @@ var sets = [
     {sets: ["sp1", "sp2", "sp3"], figure: tablevenn[6].length, label: "", size: tablevenn[6].length}
     ];
 
-
 var chart = venn.VennDiagram()
     .width(500)
     .height(400)
-
 
 var div = d3.select("#venn_diagram").datum(sets).call(chart);
     div.selectAll("text").style("fill", "white");
@@ -217,10 +232,8 @@ var div = d3.select("#venn_diagram").datum(sets).call(chart);
     	.style("stroke-opacity", 1)
     	.style("stroke", "fff");
 
-
-var tooltip = d3.select("#venn_diagram").append("div")
+var tooltip = d3.select("#venn_value").append("div")
     .attr("class", "venntooltip");
-
 
 div.selectAll("g")
     .on("mouseover", function(d, i) {
@@ -229,15 +242,13 @@ div.selectAll("g")
 
     // Display a tooltip with the current size
     tooltip.transition().duration(40).style("opacity", 1);
-    tooltip.text("le nombre de gènes de " + d.label + "est de " + d.size);
+    tooltip.text("le nombre de gènes de " + d.sets + " est de " + d.size);
 
-
-    // problème graphique disparait
     //highlight the current path
-   /* var selection = d3.select(this).transition("tooltip").duration(400);
+    var selection = d3.select(this).transition("tooltip").duration(400);
     selection.select("path")
         .style("stroke-width", 3)
-        .style("fill-opacity", d.sets.length < 1 ? .8 : 0)
+        .style("fill-opacity", d.sets.length < 1 ? .8 : 1)
         .style("stroke-opacity", 1);
     })
 
@@ -247,37 +258,19 @@ div.selectAll("g")
     })
 
     .on("mouseout", function(d, i) {
-        tooltip.transition().duration(2000).style("opacity", 0);
+        tooltip.transition().duration(1000).style("opacity", 0);
         var selection = d3.select(this).transition("tooltip").duration(400);
         selection.select("path")
             .style("stroke-width", 3)
-            .style("fill-opacity", d.sets.length < 1 ? .8 : 0)
+            .style("fill-opacity", d.sets.length < 1 ? .8 : 0.8)
             .style("stroke-opacity", 1);
-    */})
-
-		//affiche données en cliquant, sera remplacé par menu déroulant
-    .on("click", function(d, i){
-      venn.sortAreas(div, d);
-      var texte = document.getElementById('venn_value');
-      texte.textContent = ("proportion: " + d.size);
     });
 
 var venntitle = document.getElementById('venn_title');
 	venntitle.textContent = "Diagramme de venn";
+d3.select("#venn_1").style("border","double");
 }
 
-
-
-
-
-
-
-/*to do:
-reduire la taille de la fonction import avec des boucles
-faire des menus déroulants pour choisir les listes de gènes à afficher
-appeler un fonction python
-barchart with negative values
-*/
 
 
 
