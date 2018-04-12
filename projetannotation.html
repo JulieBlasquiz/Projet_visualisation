@@ -12,13 +12,12 @@
 </head>
 <body>
 	<h1>Annotation of proteomic data project</h1>
-	<div ng-controller='moncontroller'>
+	<div>
 		<p><input id="testeur" type="button" value="testeur"></p>
-		<p><input id="testeur2" type="button" value="testeur2"></p>
 		<div id="files">
-		<input type='file' onchange='openFile(event)'><br>
-		<input type='file' onchange='openFile2(event)'><br>
-		<input type='file' onchange='openFile3(event)'><br>
+		<input id='input1' type='file' onchange='openFile(event)'><br>
+		<input id='input2' type='file' onchange='openFile2(event)'><br>
+		<input id='input3' type='file' onchange='openFile3(event)'><br>
 		<p>File must respect the <strong>.csv</strong> extension with ";" separator. There must not be any empty cells in the data frame. They must be filled with 'NA' for the script to work. <em id='helpcsv1'>(help) </em></p>
 		<p>Besides the first column of the first file must correspond to up-regulated genes, same for second column of second file and third column of third file.</p>
 		</div>
@@ -29,7 +28,7 @@
 			<p id="venn_diagram"></p>
 			</div>
     <FORM name="menuform">
-    <SELECT name="menuselect1" size="1">
+    <SELECT id="menuselect" name="menuselect" size="1">
     <option class="menutest">Specie 1</option>
     <option class="menutest">Specie 2</option>
     <option class="menutest">Specie 3</option>
@@ -39,8 +38,10 @@
     <option class="menutest">Specie 1+2+3</option>
     </SELECT>
     </FORM>
-    <p><input id="download" type="button" value="dowload"></p>
-		<div id="importtest"></div>
+    <p><input id="testeur2" type="button" value="show"><input id="download" type="button" value="download"></p>
+    <p><input id="hide" class="hider" type="button" value="hide"></p>
+		<div id="importtest"><table class='tablegenes'></table><table class='tablegenes'></table><table class='tablegenes'></table></div>
+		
 	</div>
 </body>
 <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"-->

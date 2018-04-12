@@ -1,4 +1,4 @@
-.venntooltip {
+.venntooltip{
 font-size : 12px;
 position: absolute;
 left: 10px;
@@ -35,6 +35,25 @@ color: black;
 border-style: dashed;
 padding: 10px;
 }
+
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+}
+
+.hider{
+color: blue;
+}
+
+.tablegenes{
+float: left;
+width: 33.33%;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 Script for annotation of proteomic data project
 */
 
@@ -9,7 +9,7 @@ var download = document.getElementById('download');
 var testeur = document.getElementById('testeur');
 var help = document.getElementById('helpcsv1');
 var hide = document.getElementById('hide');
-
+var menuselect = document.getElementById('menuselect');
 
 
 //launch functions from variables
@@ -20,8 +20,10 @@ var setupListeners = function() {
 	help.addEventListener('mouseout', helpcsv2);
 	download.addEventListener('click',downloadfile);
 	hide.addEventListener('click',hidef);
+	menuselect.addEventListener('change',changef);
 }
 
+//Hide or show a block in html
 function hidef() {
     var x = document.getElementById("importtest");
     if (x.style.display === "none") {
@@ -32,12 +34,25 @@ function hidef() {
 }}
 
 var testeu = function() {
-    var sp1 = document.menuform.menuselect1.selectedIndex;
-alert(sp1);
+    alert(filename.value);
 }
 
+//change background color when index is changed
+var changef = function(){
+	var classes = ["sp1","sp2","sp3","sp1-2","sp1-3","sp2-3","sp1-2-3"];
+	var index = document.menuform.menuselect.selectedIndex;
+	for (var i = 0 ; i<classes.length ; i++){
+		var width = document.getElementsByClassName(classes[i]);
+		for (var j=0 ; j<width.length ; j++){
+		width[j].style.backgroundColor = "white";
+	}}
+	var width = document.getElementsByClassName(classes[index]);
+	for (var i=0 ; i<width.length ; i++){
+		width[i].style.backgroundColor = "teal";
+	}
+}
 
-
+//Create or delete help for csv
 var helpcsv1 = function() {
     d3.select("#helpcsv1").append("div").attr("id","helpcsv2").attr("class","tooltip");
     var help2 = d3.select("#helpcsv2");
@@ -58,7 +73,7 @@ tab.splice(0,1);
 tab.push(tmp);
 }
 
-//Delete dupplicate elements in array of array
+//Delete dupplicate elements in array
 var delarray = function(tab){
 tab.sort();
 var i = 0;
@@ -70,11 +85,12 @@ i--;
 i++;
 }}
 
+//download gene group as txt
 function downloadfile() {
     var tabvenn = ftest();
-    var sp = document.menuform.menuselect1.selectedIndex;
+    var sp = document.menuform.menuselect.selectedIndex;
     tabvenn = tabvenn[sp];
-    var text;
+    var text = "";
     for (var i=0;i<tabvenn.length;i++){
         for (var j=0;j<3;j++){
             if (tabvenn[i][j] !== 'NA'){
@@ -85,12 +101,9 @@ function downloadfile() {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', 'specie'+String(sp));
-
   element.style.display = 'none';
   document.body.appendChild(element);
-
   element.click();
-
   document.body.removeChild(element);
 }
 
@@ -144,33 +157,41 @@ var openFile3 = function(event) {
 };
 
 
-
+//create array with groups and create table
 var ftest = function(){
 var tablevenn = [[],[],[],[],[],[],[]];
 var cycle = [dataimport1,dataimport2,dataimport3];
 var nbc = [0,1,2];
 var cn = 0;
+var suppr = document.getElementsByClassName('tablegenes');
+var parent = document.getElementById('importtest');
+for (var i=0;i<3;i++){
+parent.removeChild(suppr[0]);}
 for (var n=0;n<3;n++){
-var line = d3.select("#importtest").append("table").attr("class","table");
-for (var i = 0; i<cycle[0].length;i++){
-    for (var j = 0; j<cycle[1].length;j++){
+var line = d3.select("#importtest").append("table").attr("class","tablegenes");
+line.append("tr").attr("id","tablehead"+String(n+1)).append("th").attr("colspan","3").text(document.getElementById('input'+String(n+1)).value);
+for (var i = 0; i<cycle[0].length-1;i++){
+    for (var j=0; j<cycle[1].length;j++){
         if ((cycle[0][i][nbc[0]] === cycle[1][j][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
             cn+=1;
             break;
         }}
-    for (var k = 0; k<cycle[2].length;k++){
-        if ((cycle[0][i][nbc[0]] === cycle[2][k][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
+    for (var j=0; j<cycle[2].length;j++){
+        if ((cycle[0][i][nbc[0]] === cycle[2][j][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
             cn+=2;
             break;
         }}
     var line2 = line.append("tr");
-    line2.append("th").append("a").attr("href", "http://www.uniprot.org/uniprot/" + cycle[0][i][0]).text(cycle[0][i][0]);
-    line2.append("th").append("a").attr("href", "http://www.uniprot.org/uniprot/" + cycle[0][i][1]).text(cycle[0][i][1]);
-    line2.append("th").append("a").attr("href", "http://www.uniprot.org/uniprot/" + cycle[0][i][2]).text(cycle[0][i][2]);
-    
+    for (var j=0; j<3; j++){
+    if (cycle[0][i][j] !== 'NA'){
+    line2.append("td").append("a").attr("href", "http://www.uniprot.org/uniprot/" + cycle[0][i][j]).text(cycle[0][i][j]);
+    }
+    else {
+    line2.append("td").text(cycle[0][i][j]);
+    }}
     if (cn === 0){
     tablevenn[n].push(cycle[0][i]);
-    line2.attr("class","sp"+String(nbc[0]));
+    line2.attr("class","sp"+String(nbc[0]+1));
     }
     if (cn == 1 && cycle[0] == dataimport1){
     tablevenn[3].push(cycle[0][i]);
@@ -178,19 +199,19 @@ for (var i = 0; i<cycle[0].length;i++){
     }
     if (cn == 1 && cycle[0] == dataimport2){
     tablevenn[4].push(cycle[0][i]);
-    line2.attr("class","sp1-3");
+    line2.attr("class","sp2-3");
     }
     if (cn == 1 && cycle[0] == dataimport3){
     tablevenn[5].push(cycle[0][i]);
-    line2.attr("class","sp2-3");
+    line2.attr("class","sp1-3");
     }
     if (cn == 2 && cycle[0] == dataimport1){
     tablevenn[3].push(cycle[0][i]);
-    line2.attr("class","sp1-2");
+    line2.attr("class","sp1-3");
     }
     if (cn == 2 && cycle[0] == dataimport2){
     tablevenn[4].push(cycle[0][i]);
-    line2.attr("class","sp1-3");
+    line2.attr("class","sp1-2");
     }
     if (cn == 2 && cycle[0] == dataimport3){
     tablevenn[5].push(cycle[0][i]);
@@ -219,9 +240,9 @@ var diagram = function(){
 var tablevenn = ftest();
 //venn diagram data
 var sets = [
-    {sets:["sp1"], figure: tablevenn[0].length, label: "sp1", size: 50},
-    {sets:["sp2"], figure: tablevenn[1].length, label: "sp2", size: 50},
-    {sets:["sp3"], figure: tablevenn[2].length, label: "sp3", size: 50},
+    {sets:["sp1"], figure: tablevenn[0].length, label: document.getElementById('input1').value, size: 50},
+    {sets:["sp2"], figure: tablevenn[1].length, label: document.getElementById('input2').value, size: 50},
+    {sets:["sp3"], figure: tablevenn[2].length, label: document.getElementById('input3').value, size: 50},
     {sets: ["sp1", "sp2"], figure: tablevenn[3].length, label: "", size: 20},
     {sets: ["sp1", "sp3"], figure: tablevenn[4].length, label: "", size: 20},
     {sets: ["sp2", "sp3"], figure: tablevenn[5].length, label: "", size: 20},
@@ -250,7 +271,7 @@ div.selectAll("g")
 
     // Display a tooltip with the current size
     tooltip.transition().duration(40).style("opacity", 1);
-    tooltip.text("le nombre de gènes de " + d.sets + " est de " + d.size);
+    tooltip.text("number of up-regulated genes: " + d.figure);
 
     //highlight the current path
     var selection = d3.select(this).transition("tooltip").duration(400);
