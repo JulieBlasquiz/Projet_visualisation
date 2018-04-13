@@ -23,8 +23,10 @@ var setupListeners = function() {
 	menuselect1.addEventListener('change',changef);
 }
 
+
+
 //Hide or show a block in html
-var hidef = function () {
+var hidef = function() {
     var x = document.getElementById("importtest");
     if (x.style.display === "none") {
         x.style.display = "block";
