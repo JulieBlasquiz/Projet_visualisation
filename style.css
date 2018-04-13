@@ -58,6 +58,11 @@ width: 33.33%;
 font-size: 12px;
 }
 
+.hidden{
+display: none;
+}
+
+
 /* Définition des polices personnalisées */
 
 @font-face

@@ -36,9 +36,11 @@
 		<input id='input2' type='file' onchange='openFile2(event)'><br>
 		<input id='input3' type='file' onchange='openFile3(event)'><br>
 		<p>File must respect the <strong>.csv</strong> extension with ";" separator. There must not be any empty cells in the data frame. They must be filled with 'NA' for the script to work. <em id='helpcsv1'>(help) </em></p>
+		<p id="helpcsv2" class="hidden">Open the file with excel or libreoffice calc, select your dataframe, search \"\" and replace with \"NA\", then save as .csv with \";\" separator.</p>
 		<p>Besides the first column of the first file must correspond to up-regulated genes, same for second column of second file and third column of third file.</p>
 		</div>
 		<p><input id="launch" type="button" value="launch script"></p>
+		<div id='venndata' class="hidden">
 		<div id="venn_1">
 			<h3 id='venn_title'></h3>
 			<p id='venn_value'></p>
@@ -69,7 +71,7 @@
     <p><input id="testeur2" type="button" value="show"><input id="download" type="button" value="download"></p>
     <p><input id="hide1" class="hider" type="button" value="hide"></p>
 		<div id="importtest"><table class='tablegenes'></table><table class='tablegenes'></table><table class='tablegenes'></table></div>
-		
+		</div>
 	</div>
 
                     <h1><img src="images/ico_epingle.png" alt="Catégorie" class="ico_categorie" />Diverging Stacked Bar Chart :</h1>

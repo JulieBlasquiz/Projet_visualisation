@@ -56,15 +56,12 @@ var changef = function(){
 
 //Create or delete help for csv
 var helpcsv1 = function() {
-    d3.select("#helpcsv1").append("div").attr("id","helpcsv2").attr("class","tooltip");
-    var help2 = d3.select("#helpcsv2");
-    help2.text("Open the file with excel or libreoffice calc, select your dataframe, search \"\" and replace with \"NA\", then save as .csv with \";\" separator.");
-    help2.transition().duration(40).style("opacity", 1);
+    var help2 = document.getElementById('helpcsv2');
+    help2.style.display = "block";
 }
 var helpcsv2 = function() {
-    var suppr = document.getElementById('helpcsv2');
-    var parent = document.getElementById('helpcsv1');
-    parent.removeChild(suppr);
+    var help2 = document.getElementById('helpcsv2');
+    help2.style.display = "none";
 }
 
 
@@ -256,16 +253,18 @@ return tablevenn;
 
 //calcul and show the venn diagram from imported data
 var diagram = function(){
+var show = document.getElementById("venndata");
+show.style.display = "block";
 var tablevenn = ftest();
 //venn diagram data
 var sets = [
-    {sets:["sp1"], figure: tablevenn[0].length, label: document.getElementById('input1').value, size: 50},
-    {sets:["sp2"], figure: tablevenn[1].length, label: document.getElementById('input2').value, size: 50},
-    {sets:["sp3"], figure: tablevenn[2].length, label: document.getElementById('input3').value, size: 50},
-    {sets: ["sp1", "sp2"], figure: tablevenn[3].length, label: "", size: 20},
-    {sets: ["sp1", "sp3"], figure: tablevenn[4].length, label: "", size: 20},
-    {sets: ["sp2", "sp3"], figure: tablevenn[5].length, label: "", size: 20},
-    {sets: ["sp1", "sp2", "sp3"], figure: tablevenn[6].length, label: "", size: 5}
+    {sets:["sp1"], figure: tablevenn[0], label: document.getElementById('input1').value, size: 50},
+    {sets:["sp2"], figure: tablevenn[1], label: document.getElementById('input2').value, size: 50},
+    {sets:["sp3"], figure: tablevenn[2], label: document.getElementById('input3').value, size: 50},
+    {sets: ["sp1", "sp2"], figure: tablevenn[3], label: "", size: 20},
+    {sets: ["sp1", "sp3"], figure: tablevenn[4], label: "", size: 20},
+    {sets: ["sp2", "sp3"], figure: tablevenn[5], label: "", size: 20},
+    {sets: ["sp1", "sp2", "sp3"], figure: tablevenn[6], label: "", size: 5}
     ];
 
 var chart = venn.VennDiagram()
@@ -290,7 +289,7 @@ div.selectAll("g")
 
     // Display a tooltip with the current size
     tooltip.transition().duration(40).style("opacity", 1);
-    tooltip.text("number of up-regulated genes: " + d.figure);
+    tooltip.text("number of up-regulated genes: " + d.figure.length);
 
     //highlight the current path
     var selection = d3.select(this).transition("tooltip").duration(400);
@@ -310,7 +309,13 @@ div.selectAll("g")
         selection.select("path")
             .style("stroke-width", 3)
             .style("stroke-opacity", 1);
-    });
+    })
+
+    .on("click", function(d,i) {
+    fig = String(d.figure);
+    fig = fig.split(",");
+    d3.select("#infos").text(fig);});
+    ;
 
 var venntitle = document.getElementById('venn_title');
 	venntitle.textContent = "Diagramme de venn";
