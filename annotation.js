@@ -3,31 +3,44 @@ Script for annotation of proteomic data project
 */
 
 
+
 //get html elements in variables
-var launch = document.getElementById('launch');
+var launchvenn = document.getElementById('launchvenn');
+var launchback = document.getElementById('launchback');
 var download = document.getElementById('download');
 var testeur = document.getElementById('testeur');
 var help = document.getElementById('helpcsv1');
 var hide1 = document.getElementById('hide1');
+var hide2 = document.getElementById('hide2');
 var menuselect1 = document.getElementById('menuselect1');
 
 
 //launch functions from variables
 var setupListeners = function() {
-	launch.addEventListener('click', diagram);
+	launchvenn.addEventListener('click', diagram);
+	launchback.addEventListener('click', backtoback);
 	testeur.addEventListener('click', testeu);
 	help.addEventListener('mouseover', helpcsv1);
 	help.addEventListener('mouseout', helpcsv2);
 	download.addEventListener('click',downloadfile);
-	hide1.addEventListener('click',hidef);
+	hide1.addEventListener('click',hidef1);
+	hide2.addEventListener('click',hidef2);
 	menuselect1.addEventListener('change',changef);
 }
 
-
+window.addEventListener('load', setupListeners);
 
 //Hide or show a block in html
-var hidef = function() {
+var hidef1 = function() {
     var x = document.getElementById("importtest");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+    else {
+        x.style.display = "none";
+}}
+var hidef2 = function() {
+    var x = document.getElementById("divfigure");
     if (x.style.display === "none") {
         x.style.display = "block";
     }
@@ -36,8 +49,9 @@ var hidef = function() {
 }}
 
 var testeu = function() {
-    alert(filename.value);
+    alert(filenames());
 }
+
 
 //change background color when index is changed
 var changef = function(){
@@ -50,7 +64,7 @@ var changef = function(){
 	}}
 	var width = document.getElementsByClassName(classes[index]);
 	for (var i=0 ; i<width.length ; i++){
-		width[i].style.backgroundColor = "teal";
+		width[i].style.backgroundColor = "#aaffaa";
 	}
 }
 
@@ -84,29 +98,55 @@ i--;
 i++;
 }}
 
+//return an array with specie names
+var filenames = function(){
+var tabsp = [];
+for (var i=0;i<3;i++){
+tabsp.push(document.getElementById('input'+String(i+1)).value);
+var tmp = tabsp[i].split("/");
+tmp = tmp[tmp.length-1].split(".");
+tabsp[i]=tmp[0];
+}
+tabsp.push(tabsp[0]+"+"+tabsp[1]);
+tabsp.push(tabsp[0]+"+"+tabsp[2]);
+tabsp.push(tabsp[1]+"+"+tabsp[2]);
+tabsp.push(tabsp[0]+"+"+tabsp[1]+"+"+tabsp[2]);
+return tabsp;
+}
+
+//Put specie names in the lists
+var specielist = function(){
+var tabsp = filenames();
+d3.selectAll(".menusp").remove();
+var add1 = d3.select("#menuselect1");
+var add2 = d3.select("#menuselect2");
+for (var i=0; i<7; i++){
+add1.append("option").attr("class", "menusp").text(tabsp[i]);
+add2.append("option").attr("class", "menusp").text(tabsp[i]);
+}}
+
 //download gene group as txt
 function downloadfile() {
-    var tabvenn = ftest();
     var sp1 = document.menuform1.menuselect1.selectedIndex;
     var sp2 = document.menuform2.menuselect2.selectedIndex;
     if (sp1 !== sp2){
-    downloadfile2(tabvenn[sp1],"1",sp1);
-    downloadfile2(tabvenn[sp2],"2",sp2);
+    downloadfile2(tablevenn[sp1],"1",sp1);
+    downloadfile2(tablevenn[sp2],"2",sp2);
     }
     else {
     alert("pick two different groups");
     }
 }
-function downloadfile2(tabvenn,nb,sp){
+function downloadfile2(tablevenn,nb,sp){
     var text = "";
-    for (var i=0;i<tabvenn.length;i++){
+    for (var i=0;i<tablevenn.length;i++){
     if (sp == 6){
       for (var j=0; j<3; j++){
-        text = text + String(tabvenn[i][j] + ",\n");
+        text = text + String(tablevenn[i][j] + ",\n");
       }
     }
     else{
-                text = text + String(tabvenn[i]) + ",\n";
+                text = text + String(tablevenn[i]) + ",\n";
     }}
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -117,20 +157,24 @@ function downloadfile2(tabvenn,nb,sp){
   document.body.removeChild(element);
 }
 
-//import of a csv file
+
+var parsedata = function(text){
+	var dataimport = text.split(["\n"]);
+	for(var i=0;i<dataimport.length;i++){
+			var tmp = dataimport[i].split([',']);
+			dataimport[i] = tmp;
+}
+return dataimport;
+}
+
 var dataimport1 = 0;
 var openFile = function(event) {
 	var input = event.target;
 	var reader = new FileReader();
 	reader.onload = function(){
 		var text = reader.result;
-		dataimport1 = text.split(["\n"]);
-		for(var i=0;i<dataimport1.length;i++){
-			var tmp = dataimport1[i].split([',']);
-			dataimport1[i] = tmp;
+		dataimport1 = parsedata(text, dataimport1);
 		}
-
-	};
 	reader.readAsText(input.files[0]);
 };
 
@@ -140,13 +184,8 @@ var openFile2 = function(event) {
     var reader = new FileReader();
     reader.onload = function(){
         var text = reader.result;
-        dataimport2 = text.split(["\n"]);
-        for(var i=0;i<dataimport2.length;i++){
-            var tmp = dataimport2[i].split([',']);
-            dataimport2[i] = tmp;
+        dataimport2 = parsedata(text);
         }
-
-    };
     reader.readAsText(input.files[0]);
 };
 
@@ -156,39 +195,36 @@ var openFile3 = function(event) {
     var reader = new FileReader();
     reader.onload = function(){
         var text = reader.result;
-        dataimport3 = text.split(["\n"]);
-        for(var i=0;i<dataimport3.length;i++){
-            var tmp = dataimport3[i].split([',']);
-            dataimport3[i] = tmp;
+        dataimport3 = parsedata(text);
         }
-
-    };
     reader.readAsText(input.files[0]);
 };
 
 
+
 //create array with groups and create table
+var tablevenn = [];
 var ftest = function(){
-var tablevenn = [[],[],[],[],[],[],[]];
+tablevenn = [[],[],[],[],[],[],[]];
 var cycle = [dataimport1,dataimport2,dataimport3];
+//var dic = {5:[3,1,2],6:[4,2,3],7:[5,1,3],10:[3,1,3],11:[4,1,2],12:[5,2,3]}
 var nbc = [0,1,2];
 var cn = 0;
-var suppr = document.getElementsByClassName('tablegenes');
-var parent = document.getElementById('importtest');
-for (var i=0;i<3;i++){
-parent.removeChild(suppr[0]);}
+var tabsp = filenames();
+d3.selectAll('.tablegenes').remove();
 for (var n=0;n<3;n++){
 var line = d3.select("#importtest").append("table").attr("class","tablegenes");
-line.append("tr").attr("id","tablehead"+String(n+1)).append("th").attr("colspan","3").text(document.getElementById('input'+String(n+1)).value);
+line.append("tr").attr("id","tablehead"+String(n+1)).append("th").attr("colspan","3").text(tabsp[n]);
+
 for (var i = 0; i<cycle[0].length-1;i++){
     for (var j=0; j<cycle[1].length;j++){
         if ((cycle[0][i][nbc[0]] === cycle[1][j][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
-            cn+=1;
+            cn+=5;
             break;
         }}
     for (var j=0; j<cycle[2].length;j++){
         if ((cycle[0][i][nbc[0]] === cycle[2][j][nbc[0]]) && (cycle[0][i][nbc[1]] !== "NA") && (cycle[0][i][nbc[2]] !== "NA")){
-            cn+=2;
+            cn+=10;
             break;
         }}
     var line2 = line.append("tr");
@@ -203,40 +239,47 @@ for (var i = 0; i<cycle[0].length-1;i++){
     tablevenn[n].push(cycle[0][i][n]);
     line2.attr("class","sp"+String(nbc[0]+1));
     }
-    if (cn == 1 && cycle[0] == dataimport1){
+    if (cn == 5 && cycle[0] == dataimport1){
     tablevenn[3].push(cycle[0][i][0]);
     tablevenn[3].push(cycle[0][i][1]);
     line2.attr("class","sp1-2");
     }
-    if (cn == 1 && cycle[0] == dataimport2){
+    if (cn == 5 && cycle[0] == dataimport2){
     tablevenn[4].push(cycle[0][i][1]);
     tablevenn[4].push(cycle[0][i][2]);
     line2.attr("class","sp2-3");
     }
-    if (cn == 1 && cycle[0] == dataimport3){
+    if (cn == 5 && cycle[0] == dataimport3){
     tablevenn[5].push(cycle[0][i][0]);
     tablevenn[5].push(cycle[0][i][2]);
     line2.attr("class","sp1-3");
     }
-    if (cn == 2 && cycle[0] == dataimport1){
+    if (cn == 10 && cycle[0] == dataimport1){
     tablevenn[3].push(cycle[0][i][0]);
     tablevenn[3].push(cycle[0][i][2]);
     line2.attr("class","sp1-3");
     }
-    if (cn == 2 && cycle[0] == dataimport2){
+    if (cn == 10 && cycle[0] == dataimport2){
     tablevenn[4].push(cycle[0][i][0]);
     tablevenn[4].push(cycle[0][i][1]);
     line2.attr("class","sp1-2");
     }
-    if (cn == 2 && cycle[0] == dataimport3){
+    if (cn == 10 && cycle[0] == dataimport3){
     tablevenn[5].push(cycle[0][i][1]);
     tablevenn[5].push(cycle[0][i][2]);
     line2.attr("class","sp2-3");
     }
-    if (cn === 3){
+    else if (cn === 15){
     tablevenn[6].push(cycle[0][i]);
     line2.attr("class","sp1-2-3");
     }
+    /*
+    else {
+    tablevenn[dic[cn+nbc][0]].push(cycle[0][i][dic[cn+nbc[0]][1]]);
+    tablevenn[dic[cn+nbc][0]].push(cycle[0][i][dic[cn+nbc[0]][2]]);
+    line2.attr("class","sp1-3");
+    }*/
+    
     cn=0;
 }
 pushleft(cycle);
@@ -253,9 +296,10 @@ return tablevenn;
 
 //calcul and show the venn diagram from imported data
 var diagram = function(){
+specielist();
 var show = document.getElementById("venndata");
 show.style.display = "block";
-var tablevenn = ftest();
+tablevenn = ftest();
 //venn diagram data
 var sets = [
     {sets:["sp1"], figure: tablevenn[0], label: document.getElementById('input1').value, size: 50},
@@ -312,33 +356,23 @@ div.selectAll("g")
     })
 
     .on("click", function(d,i) {
-    fig = String(d.figure);
+    var fig = String(d.figure);
     fig = fig.split(",");
+    for (var i=0; i<fig.length; i++){
+    fig[i]="\n"+fig[i];
+    }
     d3.select("#infos").text(fig);});
     ;
 
-var venntitle = document.getElementById('venn_title');
-	venntitle.textContent = "Diagramme de venn";
-d3.select("#venn_1").style("border","double");
 }
 
 
 
 
+var backtoback = function(){
+d3.select("#backblock").style("display","block");
 
-window.addEventListener('load', setupListeners);
-
-
-
-
-
-
-
-
-
-
-
-var margin = {top: 50, right: 20, bottom: 10, left: 320},
+var margin = {top: 50, right: 0, bottom: 10, left: 320},
     width = 800 - margin.left - margin.right,
     height = 2500;
 
@@ -368,10 +402,9 @@ var svg = d3.select("#figure").append("svg")
 
   color.domain(["Group 1", "Common", "Group 2"]);
 
-  d3.csv("list1.tableReport.txt", function(error, data) {
+  d3.csv("result.txt", function(error, data) {
 
   data.forEach(function(d) {
-    //calc percentages
     d["Group 1"] = +d[1]*100/d.N;
     d["Common"] = +d[2]*100/d.N;
     d["Group 2"] = +d[3]*100/d.N;
@@ -394,7 +427,6 @@ var svg = d3.select("#figure").append("svg")
 
   svg.append("g")
       .attr("class", "x axis");
-      //.call(xAxis);
 
   svg.append("g")
       .attr("class", "y axis")
@@ -423,7 +455,7 @@ var svg = d3.select("#figure").append("svg")
       .attr("dx", "0.5em")
       .style("font" ,"10px sans-serif")
       .style("text-anchor", "begin")
-      .text(function(d) { return d.n });//!== 0 && (d.x1-d.x0)>3 ? d.n : "" });
+      .text(function(d) { return d.n });
 
   vakken.insert("rect",":first-child")
       .attr("height", y.rangeBand())
@@ -441,7 +473,6 @@ var svg = d3.select("#figure").append("svg")
       .attr("y2", height);
 
   var startp = svg.append("g").attr("class", "legendbox").attr("id", "mylegendbox");
-  // this is not nice, we should calculate the bounding box and use that
   var legend_tabs = [0, 120, 240];
   var legend = startp.selectAll(".legend")
       .data(color.domain().slice())
@@ -477,14 +508,13 @@ var svg = d3.select("#figure").append("svg")
   d3.selectAll(".legendbox").attr("transform", "translate(" + movesize  + ",0)");
 
   var interaction = d3.selectAll(".bar")
-//#alert(d.Annot+"\n" + d[1] + " ID : " + "\n" + d.geneID);})
     .on("mouseover", function(d) { d3.select(this).attr("fill-opacity", "0.5");})
     .on("mouseout", function(d) { d3.select(this).attr("fill-opacity", "1");});
 
   var interaction = d3.selectAll(".bar")
-    .on("click", function(d,i) { d3.select("#infos").text(d.Annot+"\n" + d[1] + " ID : " + "\n" + d.geneID);});
+    .on("click", function(d,i) { d3.select("#infos").text(d.Annot +'\n\n' +"Group 1, " + d[1] + " ID : "+'\n\n' + d.geneID1 +'\n\n'+"Common group, " + d[2] + " ID : "+'\n\n'+ d.geneIDCommon + '\n\n'+"Group 2, "  + d[3] + " ID : "+'\n\n'+ d.geneID2);});
 
   var legend = startp.selectAll(".legend")
     .on("mouseover", function(d) { interaction.attr("fill-opacity", "0.5"),d3.select(this).attr("fill-opacity", "0.5");})
     .on("mouseout", function(d) { interaction.attr("fill-opacity", "1"),d3.select(this).attr("fill-opacity", "1");});
-});
+});}
