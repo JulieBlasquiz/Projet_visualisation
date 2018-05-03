@@ -1,4 +1,0 @@
-groupes,proportion
-Group_1,346
-Group_2,890
-Common,0
