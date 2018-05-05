@@ -56,10 +56,11 @@ color: blue;
 .tablegenes{
 float: left;
 width: 33.33%;
+font-size: 12px;
 }
 
-#importtest{
-font-size: 12px;
+.sp1{
+background-color: #aaffaa;
 }
 
 /*for elements hidden when loading the page*/

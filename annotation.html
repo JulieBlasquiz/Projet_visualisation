@@ -35,8 +35,9 @@
 										<h3 id='venn_title'>Diagramme de venn</h3>
 										<p id='venn_value'></p>
 										<p id="venn_diagram"></p>
+										<p>The selected data represents up-regulated genes that belong to the selected category</p>
 									</div>
-									<p>The selected data represents up-regulated genes that only belong to the selected category</p>
+									<p>select the groups you want to download with the two lists then click "download"</p>
 									<FORM name="menuform1">
 										<SELECT id="menuselect1" name="menuselect" size="1">
 											<option class="menusp">Specie 1</option>
@@ -61,8 +62,19 @@
 									</FORM>
 									<p><input id="download" type="button" value="download"></p>
 									<p><input id="hide1" class="hider" type="button" value="show/hide"></p>
-									<p>Chart data showing the files. Name of charts are the names of input files</p>
 									<div id="importtest">
+										<p>Chart data showing the files. Name of charts are the names of input files. Use the list to select the group to highlight</p>
+										<FORM name="menuform3">
+											<SELECT id="menuselect3" name="menuselect" size="1">
+												<option class="menusp">Specie 1</option>
+												<option class="menusp">Specie 2</option>
+												<option class="menusp">Specie 3</option>
+												<option class="menusp">Specie 1+2</option>
+												<option class="menusp">Specie 1+3</option>
+												<option class="menusp">Specie 2+3</option>
+												<option class="menusp">Specie 1+2+3</option>
+											</SELECT>
+										</FORM>
 										<table class='tablegenes'></table><table class='tablegenes'></table><table class='tablegenes'></table>
 									</div>
 									<p><input id="launchback" type="button" value="send to david"></p>

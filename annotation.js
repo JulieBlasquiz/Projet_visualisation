@@ -12,7 +12,7 @@ var download = document.getElementById('download');
 var help = document.getElementById('helpcsv1');
 var hide1 = document.getElementById('hide1');
 var hide2 = document.getElementById('hide2');
-var menuselect1 = document.getElementById('menuselect1');
+var menuselect3 = document.getElementById('menuselect3');
 var input1 = document.getElementById('input1');
 var input2 = document.getElementById('input2');
 var input3 = document.getElementById('input3');
@@ -27,7 +27,7 @@ var setupListeners = function() {
 	download.addEventListener('click',downloadfile);
 	hide1.addEventListener('click',hidef1);
 	hide2.addEventListener('click',hidef2);
-	menuselect1.addEventListener('change',changef);
+	menuselect3.addEventListener('change',changef);
 	input1.addEventListener('change',openFile);
 	input2.addEventListener('change',openFile2);
 	input3.addEventListener('change',openFile3);
@@ -62,7 +62,7 @@ var testeu = function() {
 //change background color when index is changed
 var changef = function(){
 	var classes = ["sp1","sp2","sp3","sp1-2","sp2-3","sp1-3","sp1-2-3"];
-	var index = document.menuform1.menuselect1.selectedIndex;
+	var index = document.menuform3.menuselect3.selectedIndex;
 	for (var i = 0 ; i<classes.length ; i++){
 		var width = document.getElementsByClassName(classes[i]);
 		for (var j=0 ; j<width.length ; j++){
@@ -126,9 +126,11 @@ var tabsp = filenames();
 d3.selectAll(".menusp").remove();
 var add1 = d3.select("#menuselect1");
 var add2 = d3.select("#menuselect2");
+var add3 = d3.select("#menuselect3");
 for (var i=0; i<7; i++){
 add1.append("option").attr("class", "menusp").text(tabsp[i]);
 add2.append("option").attr("class", "menusp").text(tabsp[i]);
+add3.append("option").attr("class", "menusp").text(tabsp[i]);
 }}
 
 //download gene group as txt
@@ -136,24 +138,18 @@ function downloadfile() {
     var sp1 = document.menuform1.menuselect1.selectedIndex;
     var sp2 = document.menuform2.menuselect2.selectedIndex;
     if (sp1 !== sp2){
-    downloadfile2(tablevenn[sp1],"1",sp1);
-    downloadfile2(tablevenn[sp2],"2",sp2);
+    downloadfile2(tablevenn[sp1],"1");
+    downloadfile2(tablevenn[sp2],"2");
     }
     else {
     alert("pick two different groups");
     }
 }
-function downloadfile2(tablevenn,nb,sp){
+function downloadfile2(tablevenn,nb){
     var text = "";
     for (var i=0;i<tablevenn.length;i++){
-    if (sp == 6){
-      for (var j=0; j<3; j++){
-        text = text + String(tablevenn[i][j] + ",\n");
-      }
-    }
-    else{
         text = text + String(tablevenn[i]) + ",\n";
-    }}
+    }
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', 'listiduniprot' + nb + '.txt');
@@ -212,7 +208,7 @@ var openFile3 = function(event) {
 
 //create array with groups and create table
 var tablevenn = [];
-var ftest = function(){
+var parseentry = function(){
 var table = [[],[],[],[],[],[],[]];
 var cycle = [dataimport1,dataimport2,dataimport3];
 //var dic = {5:[3,1,2],6:[4,2,3],7:[5,1,3],10:[3,1,3],11:[4,1,2],12:[5,2,3]}
@@ -223,6 +219,7 @@ d3.selectAll('.tablegenes').remove();
 
 //loop for each file
 for (var n=0;n<3;n++){
+//create the table
 var line = d3.select("#importtest").append("table").attr("class", "tablegenes").attr("id","tablegenes"+String(n+1));
 line.append("tr").attr("id","tablehead"+String(n+1)).append("th").attr("colspan","3").text(tabsp[n]);
 
@@ -263,7 +260,7 @@ for (var i = 0; i<cycle[0].length-1;i++){
             table[5].push(cycle[0][i][2]);
             line2.attr("class","sp1-3");
             }
-            //break;
+            break;
         }}
     //check table +2
     for (var j=0; j<cycle[2].length;j++){
@@ -285,11 +282,13 @@ for (var i = 0; i<cycle[0].length-1;i++){
             table[4].push(cycle[0][i][2]);
             line2.attr("class","sp2-3");
             }
-            //break;
+            break;
         }}
         
     if (cn === 15){
-    table[6].push(cycle[0][i]);
+    table[6].push(cycle[0][i][0]);
+    table[6].push(cycle[0][i][1]);
+    table[6].push(cycle[0][i][2]);
     line2.attr("class","sp1-2-3");
     }
     
@@ -318,7 +317,7 @@ var launchvennf = function(){
 specielist();
 var show = document.getElementById("venndata");
 show.style.display = "block";
-tablevenn = ftest();
+tablevenn = parseentry();
 diagram(tablevenn);
 }
 
