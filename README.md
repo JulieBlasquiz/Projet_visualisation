@@ -3,24 +3,10 @@ Développement d'un outil client pour la visualisation de l'annotation fonctionn
 
 Télécharger serveur_socket.zip
 
-
 Ouvrir un terminal dans le dossier quickgo_serveur_2018_04_20
 
 Ligne de commande a executer : node new_serveur.js
 
-Dans le navigateur de recherche Mozilla Firefox taper l'adresse suivante : http://localhost:8082
+Dans un navigateur taper l'adresse suivante : http://localhost:8082
 
-
-Sur la page web :
-
-Importer les 3 fichier csv des 3 especes a etudier
-
-
-Cliquer sur launch script : un diagramme de Venn est genere ainsi qu'un tableau comparatif
-
-
-Selectionner 2 groupes dans les listes deroulantes
-
-Cliquer sur "send to QuickGO" : (~ 1 minute) 
-
-Les requetes sur QuickGO sont effectuees, un histogramme back to back interactif est genere
+Sur la page un manuel utilisateur détaillant les fonctionnalitées de l'outil est disponible.
