@@ -3,7 +3,7 @@ Développement d'un outil client pour la visualisation de l'annotation fonctionn
 
 Télécharger serveur_socket.zip
 
-Ouvrir un terminal dans le dossier quickgo_serveur_2018_04_20
+Ouvrir un terminal dans le dossier serveur_socket
 
 Ligne de commande a executer : node new_serveur.js
 
