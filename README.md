@@ -5,7 +5,7 @@ Download serveur_socket.zip
 
 Open a terminal in the serveur_socket folder
 
-Command line to run : node new_serveur.js
+Command line to run : node new_server.js
 
 In a web browser, type the following address : http://localhost:8082
 
@@ -19,7 +19,7 @@ Télécharger serveur_socket.zip
 
 Ouvrir un terminal dans le dossier serveur_socket
 
-Ligne de commande a executer : node new_serveur.js
+Ligne de commande a executer : node new_server.js
 
 Dans un navigateur taper l'adresse suivante : http://localhost:8082
 
