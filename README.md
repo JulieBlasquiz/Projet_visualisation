@@ -23,4 +23,4 @@ Ligne de commande a executer : node new_server.js
 
 Dans un navigateur taper l'adresse suivante : http://localhost:8082
 
-Sur la page, un manuel utilisateur détaillant les fonctionnalitées de l'outil est disponible.
+Sur la page, un manuel utilisateur détaillant les fonctionnalités de l'outil est disponible.
