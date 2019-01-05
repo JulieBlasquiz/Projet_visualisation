@@ -1,9 +1,9 @@
 # Visualization project
 Development of a client tool for the visualization of the functional annotation of proteomic data :
 
-Download serveur_socket.zip
+Download server_socket.zip
 
-Open a terminal in the serveur_socket folder
+Open a terminal in the server_socket folder
 
 Command line to run : node new_server.js
 
@@ -15,9 +15,9 @@ On the web page, a user manual detailing the features of the tool is available.
 # Projet_visualisation
 Développement d'un outil client pour la visualisation de l'annotation fonctionnelle de données protéomiques :
 
-Télécharger serveur_socket.zip
+Télécharger server_socket.zip
 
-Ouvrir un terminal dans le dossier serveur_socket
+Ouvrir un terminal dans le dossier server_socket
 
 Ligne de commande a executer : node new_server.js
 
