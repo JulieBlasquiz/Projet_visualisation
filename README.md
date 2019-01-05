@@ -12,15 +12,15 @@ In a web browser, type the following address : http://localhost:8082
 On the web page, a user manual detailing the features of the tool is available.
 
 
-# Projet_visualisation
+# Projet visualisation
 Développement d'un outil client pour la visualisation de l'annotation fonctionnelle de données protéomiques :
 
 Télécharger server_socket.zip
 
 Ouvrir un terminal dans le dossier server_socket
 
-Ligne de commande a executer : node new_server.js
+Exécuter la ligne de commande : node new_server.js
 
-Dans un navigateur taper l'adresse suivante : http://localhost:8082
+Taper l'adresse suivante dans un navigateur : http://localhost:8082
 
 Sur la page, un manuel utilisateur détaillant les fonctionnalités de l'outil est disponible.
